@@ -1,0 +1,32 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+env/
+venv/
+.venv/
+.python-version # Generally recommended to ignore specific version files
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Specific IDE/Editor files (optional, for personal use)
+.idea/ # PyCharm files
+.vscode/ # VS Code files
+.cache/
+*.swp # Vim swap files
+
