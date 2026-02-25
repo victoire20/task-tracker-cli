@@ -78,8 +78,20 @@ def update_task_by_id(task_id: int, description: str):
 def delete_task_by_id(task_id: int):
     task_index = get_task_by_id(task_id)
     data = read_data()
-    if task_index and task_index >= 0:
+    if task_index is not None and task_index >= 0:
         del data[task_index]
+        try:
+            with open(JSON_FILE, 'w', encoding="utf-8") as f:
+                json.dump(data, f, indent=4, ensure_ascii=False)
+        except PermissionError as e:
+            print(f"PermissionError: {e}")
+
+def change_status(task_id: int, status: TaskStatus):
+    task_index = get_task_by_id(task_id)
+    data = read_data()
+    if task_index is not None and task_index >= 0:
+        data[task_index]['status'] = status.value
+        data[task_index]['updatedAt'] = str(datetime.now())
         try:
             with open(JSON_FILE, 'w', encoding="utf-8") as f:
                 json.dump(data, f, indent=4, ensure_ascii=False)
@@ -118,8 +130,15 @@ if __name__ == '__main__':
 
             if cmd[1].lower() == LIST_COMMANDS[2] and len(cmd) == 3:
                 delete_task_by_id(int(cmd[2]))
+                continue
 
-            
+            if cmd[1].lower() == LIST_COMMANDS[3] and len(cmd) == 3:
+                change_status(int(cmd[2]), TaskStatus.IN_PROGRESS)
+                continue
+
+            if cmd[1].lower() == LIST_COMMANDS[4] and len(cmd) == 3:
+                change_status(int(cmd[2]), TaskStatus.DONE)
+                continue
     except ValueError as e:
         print(f"ValueError: {e}")
     except KeyboardInterrupt:
