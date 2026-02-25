@@ -15,6 +15,15 @@ This README documents the CLI features and highlights the `create_task` behavior
 Language: English (default)
 Other language: French in `README-FR.md`
 
+## 📌 Project Origin
+
+This project is based on the **Task Tracker challenge** from [roadmap.sh](https://roadmap.sh).
+
+You can find the original challenge here:  
+https://roadmap.sh/projects/task-tracker
+
+It is part of a series of hands-on projects designed to strengthen backend development fundamentals, including file handling, data persistence, and command-line interface design.
+
 ## Features
 
 - Add a task: `task-cli add "Description"`

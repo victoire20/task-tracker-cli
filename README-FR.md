@@ -15,6 +15,15 @@ Ce README documente les fonctionnalites du CLI et met en avant le comportement d
 Langue : Francais (par defaut dans ce fichier)
 Autre langue : Anglais dans `README.md`
 
+## 📌 Origine du Projet
+
+Ce projet est basé sur le challenge **Task Tracker** proposé par [roadmap.sh](https://roadmap.sh).
+
+Le challenge original est disponible ici :  
+https://roadmap.sh/projects/task-tracker
+
+Il fait partie d'une série de projets pratiques conçus pour renforcer les fondamentaux du développement backend, notamment la manipulation de fichiers, la persistance des données et la conception d'interfaces en ligne de commande.
+
 ## Fonctionnalites
 
 - Ajouter une tache : `task-cli add "Description"`
