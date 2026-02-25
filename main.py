@@ -98,6 +98,19 @@ def change_status(task_id: int, status: TaskStatus):
         except PermissionError as e:
             print(f"PermissionError: {e}")
 
+def get_all_tasks(status: TaskStatus | None = None) -> list[Task]:
+    data = read_data()
+    if status:
+        return list(filter(lambda t: t["status"] == status, data))
+    return data
+
+
+def format_datetime(dt_str: str | None = None) -> str:
+    if  not dt_str:
+        return '-'
+    dt = datetime.strptime(dt_str, "%Y-%m-%d %H:%M:%S.%f")
+    return dt.strftime("%d/%m/%Y %H:%M")
+
 
 if __name__ == '__main__':
     try:
@@ -139,6 +152,25 @@ if __name__ == '__main__':
             if cmd[1].lower() == LIST_COMMANDS[4] and len(cmd) == 3:
                 change_status(int(cmd[2]), TaskStatus.DONE)
                 continue
+
+            if cmd[1].lower() == LIST_COMMANDS[5] and len(cmd) == 2:
+                all_tasks = get_all_tasks()
+                print()
+                print(f"{'id':<3} {'description':<20} {'status':<12} {'createdAt':<20} {'updatedAt':<20}")
+                print(f"{'-' * 3} {'-' * 20} {'-' * 12} {'-' * 20} {'-' * 20}")
+                for task in all_tasks:
+                    print(
+                        str(task['id']).ljust(3),
+                        task['description'].ljust(20),
+                        task['status'].ljust(12),
+                        str(format_datetime(task['createdAt'])).ljust(20),
+                        str(format_datetime(task['updatedAt'])).ljust(20)
+                    )
+                print()
+                continue
+
+            if cmd[1].lower() == LIST_COMMANDS[5] and len(cmd) == 2:
+                pass
     except ValueError as e:
         print(f"ValueError: {e}")
     except KeyboardInterrupt:
