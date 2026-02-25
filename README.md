@@ -54,6 +54,24 @@ Expected output:
 Task added successfully (ID: 1)
 ```
 
+## Example (list)
+
+Input:
+
+```bash
+task-cli list
+```
+
+Expected output:
+
+```
+id  description       status      createdAt           updatedAt
+--  ----------------  ----------  ------------------  ------------------
+1   marketing         todo        25/02/2026 23:33    25/02/2026 23:34
+2   web site          todo        25/02/2026 23:33    -
+3   plugin cli        todo        25/02/2026 23:33    -
+```
+
 ## Notes
 
 - The ID is derived from the current number of tasks. If you delete tasks manually from the JSON file, future IDs may be reused.

@@ -54,6 +54,23 @@ Sortie attendue :
 Task added successfully (ID: 1)
 ```
 
+## Exemple (list)
+
+Entree:
+```bash
+task-cli list
+```
+
+Sortie attendue:
+
+```
+id  description       status      createdAt           updatedAt
+--  ----------------  ----------  ------------------  ------------------
+1   marketing         todo        25/02/2026 23:33    25/02/2026 23:34
+2   web site          todo        25/02/2026 23:33    -
+3   plugin cli        todo        25/02/2026 23:33    -
+```
+
 ## Notes
 
 - L'ID est calcule a partir du nombre actuel de taches. Si vous supprimez des taches manuellement dans le fichier JSON, des IDs peuvent etre reutilises.
