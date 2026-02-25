@@ -111,6 +111,54 @@ def format_datetime(dt_str: str | None = None) -> str:
     dt = datetime.strptime(dt_str, "%Y-%m-%d %H:%M:%S.%f")
     return dt.strftime("%d/%m/%Y %H:%M")
 
+def show_table(tasks: list[Task]):
+    """Displays tasks in a formatted CLI table"""
+
+    # Initialize column width
+    widths = {
+        "id": 3,
+        "description": 20,
+        "status": 12,
+        "createdAt": 20,
+        "updatedAt": 20
+    }
+
+    total_width = sum(widths.values()) + len(widths) - 1
+
+    # Table Header
+    print()
+    print(
+        f"{'id':<{widths['id']}} "
+        f"{'description':<{widths['description']}} "
+        f"{'status':<{widths['status']}} "
+        f"{'createdAt':<{widths['createdAt']}} "
+        f"{'updatedAt':<{widths['updatedAt']}}"
+    )
+    print(
+        f"{'-' * widths['id']} "
+        f"{'-' * widths['description']} "
+        f"{'-' * widths['status']} "
+        f"{'-' * widths['createdAt']} "
+        f"{'-' * widths['updatedAt']}"
+    )
+
+    # Verify is list is empty
+    if not tasks:
+        print(f"{'No tasks found'.center(total_width)}")
+        print()
+        return
+
+    # Content
+    for task in tasks:
+        print(
+            str(task['id']).ljust(widths['id']),
+            task['description'].ljust(widths['description']),
+            task['status'].ljust(widths['status']),
+            str(format_datetime(task['createdAt'])).ljust(widths['createdAt']),
+            str(format_datetime(task['updatedAt'])).ljust(widths['updatedAt'])
+        )
+    print()
+
 
 if __name__ == '__main__':
     try:
@@ -154,23 +202,20 @@ if __name__ == '__main__':
                 continue
 
             if cmd[1].lower() == LIST_COMMANDS[5] and len(cmd) == 2:
-                all_tasks = get_all_tasks()
-                print()
-                print(f"{'id':<3} {'description':<20} {'status':<12} {'createdAt':<20} {'updatedAt':<20}")
-                print(f"{'-' * 3} {'-' * 20} {'-' * 12} {'-' * 20} {'-' * 20}")
-                for task in all_tasks:
-                    print(
-                        str(task['id']).ljust(3),
-                        task['description'].ljust(20),
-                        task['status'].ljust(12),
-                        str(format_datetime(task['createdAt'])).ljust(20),
-                        str(format_datetime(task['updatedAt'])).ljust(20)
-                    )
-                print()
+                show_table(get_all_tasks())
                 continue
 
-            if cmd[1].lower() == LIST_COMMANDS[5] and len(cmd) == 2:
-                pass
+            if cmd[1].lower() == LIST_COMMANDS[5] and len(cmd) == 3 and cmd[2].lower() in LIST_STATUS:
+                all_tasks = []
+                if cmd[2].lower() == LIST_STATUS[0]:
+                    all_tasks = get_all_tasks(TaskStatus.TODO)
+                elif cmd[2].lower() == LIST_STATUS[1]:
+                    all_tasks = get_all_tasks(TaskStatus.IN_PROGRESS)
+                else:
+                    all_tasks = get_all_tasks(TaskStatus.DONE)
+                show_table(all_tasks)
+                continue
+
     except ValueError as e:
         print(f"ValueError: {e}")
     except KeyboardInterrupt:

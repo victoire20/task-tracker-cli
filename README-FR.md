@@ -10,16 +10,26 @@
 
 Un outil de gestion de taches en ligne de commande qui enregistre les taches dans un fichier JSON (`./data/tasks.json`).
 
-Ce README se concentre sur la fonctionnalite `create_task` et son comportement dans le code actuel.
+Ce README documente les fonctionnalites du CLI et met en avant le comportement de `create_task`.
 
 Langue : Francais (par defaut dans ce fichier)
 Autre langue : Anglais dans `README.md`
 
-## Resume rapide
+## Fonctionnalites
+
+- Ajouter une tache : `task-cli add "Description"`
+- Mettre a jour une description : `task-cli update <id> "Nouvelle description"`
+- Supprimer une tache : `task-cli delete <id>`
+- Marquer en cours : `task-cli mark-in-progress <id>`
+- Marquer terminee : `task-cli mark-done <id>`
+- Lister les taches : `task-cli list`
+- Lister par statut : `task-cli list todo|in-progress|done`
+
+## Resume create_task
 
 La fonction `create_task` construit une nouvelle instance de `Task` a partir de la description fournie, assigne un `id` incremental, met le statut a `todo`, et enregistre un horodatage de creation.
 
-## Comment ca marche
+## Comment ca marche (create_task)
 
 - Le point d'entree accepte une commande comme : `task-cli add "Votre description"`.
 - Le CLI appelle `create_task(description)`.
@@ -30,7 +40,7 @@ La fonction `create_task` construit une nouvelle instance de `Task` a partir de 
 - `createdAt = date/heure actuelle`
 - La fonction `add_item` enregistre la nouvelle tache dans le JSON.
 
-## Exemple
+## Exemple (create_task)
 
 Entree :
 
@@ -48,6 +58,7 @@ Task added successfully (ID: 1)
 
 - L'ID est calcule a partir du nombre actuel de taches. Si vous supprimez des taches manuellement dans le fichier JSON, des IDs peuvent etre reutilises.
 - Les horodatages sont enregistres comme des chaines issues de `datetime.now()`.
+- Les listes sont affichees dans un tableau CLI avec `id`, `description`, `status`, `createdAt`, et `updatedAt`.
 
 ## Passer a l'anglais
 
