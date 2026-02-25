@@ -55,6 +55,38 @@ def create_task(description: str) -> Task:
     return Task(id=len(data) + 1, description=description, status=TaskStatus.TODO, createdAt=str(datetime.now()))
 
 
+def get_task_by_id(task_id: int) -> int | None:
+    if not task_id:
+        return None
+    data = read_data()
+    return next((i for i, t in enumerate(data) if t["id"] == task_id), None)
+
+
+def update_task_by_id(task_id: int, description: str):
+    task_index = get_task_by_id(task_id)
+    data = read_data()
+    if task_index and task_index >= 0:
+        data[task_index]['description'] = description
+        data[task_index]['updatedAt'] = str(datetime.now())
+        try:
+            with open(JSON_FILE, 'w', encoding="utf-8") as f:
+                json.dump(data, f, indent=4, ensure_ascii=False)
+        except PermissionError as e:
+            print(f"PermissionError: {e}")
+
+
+def delete_task_by_id(task_id: int):
+    task_index = get_task_by_id(task_id)
+    data = read_data()
+    if task_index and task_index >= 0:
+        del data[task_index]
+        try:
+            with open(JSON_FILE, 'w', encoding="utf-8") as f:
+                json.dump(data, f, indent=4, ensure_ascii=False)
+        except PermissionError as e:
+            print(f"PermissionError: {e}")
+
+
 if __name__ == '__main__':
     try:
         while True:
@@ -79,12 +111,19 @@ if __name__ == '__main__':
                 add_item(task)
                 print(f"Task added successfully (ID: {task.id})")
                 continue
+
+            if cmd[1].lower() == LIST_COMMANDS[1] and len(cmd) == 4:
+                update_task_by_id(int(cmd[2]), cmd[3])
+                continue
+
+            if cmd[1].lower() == LIST_COMMANDS[2] and len(cmd) == 3:
+                delete_task_by_id(int(cmd[2]))
+
+            
     except ValueError as e:
         print(f"ValueError: {e}")
     except KeyboardInterrupt:
         exit(0)
     except AttributeError as e:
         print(f"AttributeError: {e}")
-    except Exception as e:
-        print(f'Exception: {e}')
 
