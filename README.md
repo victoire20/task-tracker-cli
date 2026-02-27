@@ -34,6 +34,64 @@ It is part of a series of hands-on projects designed to strengthen backend devel
 - List tasks: `task-cli list`
 - List tasks by status: `task-cli list todo|in-progress|done`
 
+## Exemple (-h or --helper)
+
+Input:
+```bash
+task-cli
+task-cli -h
+task-cli --help
+```
+
+Expected output:
+```
+task-cli - simple task tracker from the command line
+
+USAGE:
+  task-cli [command] [flags]
+
+DESCRIPTION:
+  A CLI tool to manage your tasks locally.
+  Tasks are stored in a JSON file on your machine.
+
+COMMANDS:
+  add        Add a new task
+  update     Update an existing task
+  delete     Delete a task
+  mark-in-progress       Mark a task as in-progress
+  mark-done       Mark a task as done
+  list       List tasks (todo, in-progress, done)
+
+FLAGS:
+  -h, --help     Show help for task-cli
+  -v, --version  Show version information
+
+EXAMPLES:
+  task-cli add "Buy groceries"
+  task-cli update 1 "Buy groceries and cook dinner"
+  task-cli delete 1
+  task-cli mark 1 in-progress
+  task-cli mark 1 done
+  task-cli list
+  task-cli list done
+
+Use "task-cli [command] --help" for more information about a command.
+```
+
+## Exemple (-v or --version)
+
+Input:
+```bash
+task-cli
+task-cli -h
+task-cli --help
+```
+
+Expected output:
+```
+task-cli version 1.0.0
+```
+
 ## Example (add)
 
 Input:
@@ -164,64 +222,6 @@ Expected output:
 id  description                 status      createdAt           updatedAt
 --  --------------------------  ----------  ------------------  ------------------
 No Task Found
-```
-
-## Exemple (-h or --helper)
-
-Input:
-```bash
-task-cli
-task-cli -h
-task-cli --help
-```
-
-Expected output:
-```
-task-cli - simple task tracker from the command line
-
-USAGE:
-  task-cli [command] [flags]
-
-DESCRIPTION:
-  A CLI tool to manage your tasks locally.
-  Tasks are stored in a JSON file on your machine.
-
-COMMANDS:
-  add        Add a new task
-  update     Update an existing task
-  delete     Delete a task
-  mark-in-progress       Mark a task as in-progress
-  mark-done       Mark a task as done
-  list       List tasks (todo, in-progress, done)
-
-FLAGS:
-  -h, --help     Show help for task-cli
-  -v, --version  Show version information
-
-EXAMPLES:
-  task-cli add "Buy groceries"
-  task-cli update 1 "Buy groceries and cook dinner"
-  task-cli delete 1
-  task-cli mark 1 in-progress
-  task-cli mark 1 done
-  task-cli list
-  task-cli list done
-
-Use "task-cli [command] --help" for more information about a command.
-```
-
-## Exemple (-v or --version)
-
-Input:
-```bash
-task-cli
-task-cli -h
-task-cli --help
-```
-
-Expected output:
-```
-task-cli version 1.0.0
 ```
 
 ## Notes
