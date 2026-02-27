@@ -6,9 +6,6 @@ from cli.commands_impl import add_commands, update_commands, delete_commands, ch
 
 
 def handle_command(cmd: list[str], service: TaskService):
-    if not cmd or cmd[0] != "task-cli":
-        raise ValueError("Invalid command")
-
     if len(cmd) == 1:
         output = TaskClIHelperFormatter()
         print(output.render(), end='\n\n')
@@ -40,13 +37,13 @@ def handle_command(cmd: list[str], service: TaskService):
 
     # ---------- Update ----------
     if command == 'update':
-        if len(cmd) != 4:
-            print("Usage: task-cli update <task_id> <new_title>")
-            return
         try:
             task_id = int(cmd[2])
         except ValueError:
             print("Task ID must be an integer")
+            return
+        if len(cmd) != 4:
+            print("Usage: task-cli update <task_id> <new_title>")
             return
         update_commands(task_id, cmd[3], service)
         list_commands(service)
@@ -54,13 +51,13 @@ def handle_command(cmd: list[str], service: TaskService):
 
     # ---------- Delete ----------
     if command == 'delete':
-        if len(cmd) != 3:
-            print("Usage: task-cli delete <task_id>")
-            return
         try:
             task_id = int(cmd[2])
         except ValueError:
             print("Task ID must be an integer")
+            return
+        if len(cmd) != 3:
+            print("Usage: task-cli delete <task_id>")
             return
         delete_commands(task_id, service)
         list_commands(service)
@@ -68,26 +65,26 @@ def handle_command(cmd: list[str], service: TaskService):
 
     # ---------- Change status ----------
     if command == 'mark-in-progress':
-        if len(cmd) != 3:
-            print("Usage: task-cli mark-in-progress <task_id>")
-            return
         try:
             task_id = int(cmd[2])
         except ValueError:
             print("Task ID must be an integer")
+            return
+        if len(cmd) != 3:
+            print("Usage: task-cli mark-in-progress <task_id>")
             return
         change_status_commands(task_id, TaskStatus.IN_PROGRESS, service)
         list_commands(service)
         return
 
     if command == 'mark-done':
-        if len(cmd) != 3:
-            print("Usage: task-cli mark-done <task_id>")
-            return
         try:
             task_id = int(cmd[2])
         except ValueError:
             print("Task ID must be an integer")
+            return
+        if len(cmd) != 3:
+            print("Usage: task-cli mark-done <task_id>")
             return
         change_status_commands(task_id, TaskStatus.DONE, service)
         list_commands(service)

@@ -23,16 +23,16 @@
     {
         "id": 4,
         "description": "application mobile",
-        "status": "todo",
+        "status": "in-progress",
         "createdAt": "2026-02-27 01:08:39.942628",
-        "updatedAt": null
+        "updatedAt": "2026-02-27 18:52:09.902876"
     },
     {
         "id": 5,
         "description": "JWT auth",
-        "status": "todo",
+        "status": "in-progress",
         "createdAt": "2026-02-27 01:10:49.147294",
-        "updatedAt": null
+        "updatedAt": "2026-02-27 19:01:52.370007"
     },
     {
         "id": 6,
