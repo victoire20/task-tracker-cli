@@ -167,6 +167,64 @@ id  description                 status      createdAt           updatedAt
 No Task Found
 ```
 
+## Exemple (-h or --helper)
+
+Entrée:
+```bash
+task-cli
+task-cli -h
+task-cli --help
+```
+
+Sortie attendue:
+```
+task-cli - simple task tracker from the command line
+
+USAGE:
+  task-cli [command] [flags]
+
+DESCRIPTION:
+  A CLI tool to manage your tasks locally.
+  Tasks are stored in a JSON file on your machine.
+
+COMMANDS:
+  add        Add a new task
+  update     Update an existing task
+  delete     Delete a task
+  mark-in-progress       Mark a task as in-progress
+  mark-done       Mark a task as done
+  list       List tasks (todo, in-progress, done)
+
+FLAGS:
+  -h, --help     Show help for task-cli
+  -v, --version  Show version information
+
+EXAMPLES:
+  task-cli add "Buy groceries"
+  task-cli update 1 "Buy groceries and cook dinner"
+  task-cli delete 1
+  task-cli mark 1 in-progress
+  task-cli mark 1 done
+  task-cli list
+  task-cli list done
+
+Use "task-cli [command] --help" for more information about a command.
+```
+
+## Exemple (-v or --version)
+
+Entrée:
+```bash
+task-cli
+task-cli -h
+task-cli --help
+```
+
+Sortie attendue:
+```
+task-cli version 1.0.0
+```
+
 ## Notes
 
 - L'ID est calcule a partir du nombre actuel de taches. Si vous supprimez des taches manuellement dans le fichier JSON, des IDs peuvent etre reutilises.

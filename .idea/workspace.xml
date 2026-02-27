@@ -8,14 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README-FR.md" beforeDir="false" afterPath="$PROJECT_DIR$/README-FR.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cli/cli_formatter.py" beforeDir="false" afterPath="$PROJECT_DIR$/cli/cli_formatter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cli/commands.py" beforeDir="false" afterPath="$PROJECT_DIR$/cli/commands.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cli/commands_impl.py" beforeDir="false" afterPath="$PROJECT_DIR$/cli/commands_impl.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/tasks.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/tasks.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/entities.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/entities.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_commands.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_commands.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_formatter.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_formatter.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
