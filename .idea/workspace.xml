@@ -5,7 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac2625ee-ab7e-4246-a405-448557a17bc4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README-FR.md" beforeDir="false" afterPath="$PROJECT_DIR$/README-FR.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cli/cli_formatter.py" beforeDir="false" afterPath="$PROJECT_DIR$/cli/cli_formatter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cli/commands.py" beforeDir="false" afterPath="$PROJECT_DIR$/cli/commands.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cli/commands_impl.py" beforeDir="false" afterPath="$PROJECT_DIR$/cli/commands_impl.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/tasks.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/tasks.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/entities.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/entities.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_commands.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_commands.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_formatter.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_formatter.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +53,7 @@
     "Python tests.Python tests for tests.test_commands.TestCommands.test_change_status.executor": "Run",
     "Python tests.Python tests for tests.test_commands.TestCommands.test_list_commands.executor": "Run",
     "Python tests.Python tests for tests.test_formatter.TestTaskCLIFormatter.executor": "Run",
+    "Python tests.Python tests for tests.test_formatter.TestTaskClIHelperFormatter.executor": "Run",
     "Python tests.Python tests for tests.test_json_repository.MyTestCase.executor": "Run",
     "Python tests.Python tests for tests.test_task_service.TestTaskService.executor": "Run",
     "Python tests.Python tests for tests.test_task_service.TestTaskService.test_add_task_service.executor": "Run",
@@ -56,6 +67,7 @@
     "Python tests.Python tests for tests.test_task_service.TestTaskService.test_list_tasks_with_status_todo.executor": "Run",
     "Python tests.Python tests for tests.test_task_service.TestTaskService.test_update_task.executor": "Run",
     "Python tests.Python tests in command.py.executor": "Run",
+    "Python tests.Python tests in test_formatter.py.executor": "Run",
     "Python.json_repository.executor": "Run",
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -118,7 +130,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for tests.test_formatter.TestTaskCLIFormatter" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for tests.test_formatter.TestTaskClIHelperFormatter" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="task-tracker-cli" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -129,11 +141,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_formatter.TestTaskCLIFormatter&quot;" />
+      <option name="_new_target" value="&quot;tests.test_formatter.TestTaskClIHelperFormatter&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for tests.test_task_service.TestTaskService.test_add_task_service" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests in test_formatter.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="task-tracker-cli" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -144,17 +156,17 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_task_service.TestTaskService.test_add_task_service&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_formatter.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.Python tests for tests.test_commands.TestCommands" />
+        <item itemvalue="Python tests.Python tests for tests.test_formatter.TestTaskClIHelperFormatter" />
+        <item itemvalue="Python tests.Python tests in test_formatter.py" />
         <item itemvalue="Python tests.Python tests for tests.test_commands.TestCommands.test_change_status" />
         <item itemvalue="Python tests.Python tests for tests.test_commands.TestCommands.test_list_commands" />
-        <item itemvalue="Python tests.Python tests for tests.test_formatter.TestTaskCLIFormatter" />
-        <item itemvalue="Python tests.Python tests for tests.test_task_service.TestTaskService.test_add_task_service" />
       </list>
     </recent_temporary>
   </component>

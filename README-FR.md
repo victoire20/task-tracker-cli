@@ -34,24 +34,9 @@ Il fait partie d'une série de projets pratiques conçus pour renforcer les fond
 - Lister les taches : `task-cli list`
 - Lister par statut : `task-cli list todo|in-progress|done`
 
-## Resume create_task
+## Exemple (add)
 
-La fonction `create_task` construit une nouvelle instance de `Task` a partir de la description fournie, assigne un `id` incremental, met le statut a `todo`, et enregistre un horodatage de creation.
-
-## Comment ca marche (create_task)
-
-- Le point d'entree accepte une commande comme : `task-cli add "Votre description"`.
-- Le CLI appelle `create_task(description)`.
-- `create_task` lit les donnees dans `./data/tasks.json`, puis retourne un nouvel objet `Task` avec :
-- `id = len(taches_existantes) + 1`
-- `description = description d'entree`
-- `status = todo`
-- `createdAt = date/heure actuelle`
-- La fonction `add_item` enregistre la nouvelle tache dans le JSON.
-
-## Exemple (create_task)
-
-Entree :
+Entrée :
 
 ```bash
 task-cli add "Acheter du lait"
@@ -61,11 +46,15 @@ Sortie attendue :
 
 ```
 Task added successfully (ID: 1)
+
+id  description       status      createdAt           updatedAt
+--  ----------------  ----------  ------------------  ------------------
+1   Acheter du lait         todo  25/02/2026 23:33    -
 ```
 
 ## Exemple (list)
 
-Entree:
+Entrée:
 ```bash
 task-cli list
 ```
@@ -75,9 +64,107 @@ Sortie attendue:
 ```
 id  description       status      createdAt           updatedAt
 --  ----------------  ----------  ------------------  ------------------
-1   marketing         todo        25/02/2026 23:33    25/02/2026 23:34
-2   web site          todo        25/02/2026 23:33    -
-3   plugin cli        todo        25/02/2026 23:33    -
+1   Acheter du lait   todo        25/02/2026 23:33    -
+```
+
+## Exemple (update)
+
+Entrée:
+```bash
+task-cli update 1 "Acheter du lait et du pain"
+```
+
+Sortie attendue:
+
+```
+id  description                 status      createdAt           updatedAt
+--  --------------------------  ----------  ------------------  ------------------
+1   Acheter du lait et du pain  todo        25/02/2026 23:33    25/02/2026 23:40
+```
+
+## Exemple (mark-in-progress)
+
+Entrée:
+```bash
+task-cli mark-in-progress 1
+```
+
+Sortie attendue:
+```
+id  description       status         createdAt           updatedAt
+--  ----------------  -------------  ------------------  ------------------
+1   Acheter du lait   in-progress    25/02/2026 23:33    25/02/2026 23:45
+```
+
+## Exemple (mark-done)
+
+Entrée:
+```bash
+task-cli mark-done 1
+```
+
+Sortie attendue:
+```
+id  description       status         createdAt           updatedAt
+--  ----------------  -------------  ------------------  ------------------
+1   Acheter du lait   done           25/02/2026 23:33    25/02/2026 23:45
+```
+
+## Exemple (list filtered: todo)
+
+Entrée:
+```bash
+task-cli list todo
+```
+
+Sortie attendue:
+```
+id  description       status      createdAt           updatedAt
+--  ----------------  ----------  ------------------  ------------------
+2   Préparer réunion  todo        25/02/2026 22:10    -
+3   Faire sport       todo        25/02/2026 21:00    -
+```
+
+## Exemple (list filtered: in-progress)
+
+Entrée:
+```bash
+task-cli list in-progress
+```
+
+Sortie attendue:
+```
+id  description         status        createdAt           updatedAt
+--  ------------------  ------------  ------------------  ------------------
+4   Revoir présentation in-progress  25/02/2026 20:00    25/02/2026 22:00
+```
+
+## Exemple (list filtered: done)
+
+Entrée:
+```bash
+task-cli list done
+```
+
+Sortie attendue:
+```
+id  description       status      createdAt           updatedAt
+--  ----------------  ----------  ------------------  ------------------
+5   Envoyer email     done        24/02/2026 18:00    24/02/2026 19:00
+```
+
+## Exemple (delete)
+
+Entrée:
+```bash
+task-cli delete 1
+```
+
+Sortie attendue:
+```
+id  description                 status      createdAt           updatedAt
+--  --------------------------  ----------  ------------------  ------------------
+No Task Found
 ```
 
 ## Notes

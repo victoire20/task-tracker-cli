@@ -4,10 +4,10 @@ from application.task_service import TaskService
 from cli.commands import handle_command
 
 if __name__ == "__main__":
-    repository = JsonTaskRepository("data/tasks.json")
+    repository = JsonTaskRepository("./data/tasks.json")
     service = TaskService(repository)
 
-    print("Task CLI started. Type 'exit' to quit.")
+    print("Task Tracker CLI started. Type 'exit', 'exit()', 'quit', or 'quit()' to quit.")
 
     try:
         while True:
@@ -17,7 +17,7 @@ if __name__ == "__main__":
 
             cmd = shlex.split(user_input)
 
-            if cmd[0].lower() == "exit":
+            if cmd[0].lower() in ["exit", "exit()", "quit", "quit()"]:
                 print("Exiting...")
                 break
 

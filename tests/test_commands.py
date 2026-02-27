@@ -23,7 +23,7 @@ class TestCommands(unittest.TestCase):
     def test_add_commands(self, mock_stdout):
         add_commands("Test task", self.service)
 
-        self.assertEqual(mock_stdout.getvalue(), f"Task added successfully (ID: {self.service.list_tasks()[0].id})\n")
+        self.assertEqual(mock_stdout.getvalue(), f"Task added successfully (ID: {self.service.list_tasks()[0].id})\n\n")
 
         add_commands('Encore', self.service)
 

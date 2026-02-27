@@ -15,9 +15,30 @@
     },
     {
         "id": 3,
-        "description": "plugin cli Ok",
-        "status": "todo",
+        "description": "webapp page",
+        "status": "done",
         "createdAt": "2026-02-25 23:33:54.953218",
+        "updatedAt": "2026-02-27 01:11:55.834807"
+    },
+    {
+        "id": 4,
+        "description": "application mobile",
+        "status": "todo",
+        "createdAt": "2026-02-27 01:08:39.942628",
+        "updatedAt": null
+    },
+    {
+        "id": 5,
+        "description": "JWT auth",
+        "status": "todo",
+        "createdAt": "2026-02-27 01:10:49.147294",
+        "updatedAt": null
+    },
+    {
+        "id": 6,
+        "description": "mongodb",
+        "status": "todo",
+        "createdAt": "2026-02-27 01:25:35.798160",
         "updatedAt": null
     }
 ]

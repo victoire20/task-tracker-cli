@@ -34,22 +34,7 @@ It is part of a series of hands-on projects designed to strengthen backend devel
 - List tasks: `task-cli list`
 - List tasks by status: `task-cli list todo|in-progress|done`
 
-## create_task summary
-
-The `create_task` function builds a new `Task` instance using the provided description, assigns a new incremental `id`, sets the status to `todo`, and stores a creation timestamp.
-
-## How it works (create_task)
-
-- The command entry point accepts input like: `task-cli add "Your task description"`.
-- The CLI calls `create_task(description)`.
-- `create_task` reads the current data from `./data/tasks.json`, then returns a new `Task` object with:
-- `id = len(existing_tasks) + 1`
-- `description = input description`
-- `status = todo`
-- `createdAt = current date/time`
-- The `add_item` function persists the new task to JSON.
-
-## Example (create_task)
+## Example (add)
 
 Input:
 
@@ -79,6 +64,106 @@ id  description       status      createdAt           updatedAt
 1   marketing         todo        25/02/2026 23:33    25/02/2026 23:34
 2   web site          todo        25/02/2026 23:33    -
 3   plugin cli        todo        25/02/2026 23:33    -
+```
+
+## Exemple (update)
+
+Input:
+```bash
+task-cli update 1 "Acheter du lait et du pain"
+```
+
+Expected output:
+
+```
+id  description                 status      createdAt           updatedAt
+--  --------------------------  ----------  ------------------  ------------------
+1   Acheter du lait et du pain  todo        25/02/2026 23:33    25/02/2026 23:40
+```
+
+## Exemple (mark-in-progress)
+
+Input:
+```bash
+task-cli mark-in-progress 1
+```
+
+Expected output:
+```
+id  description       status         createdAt           updatedAt
+--  ----------------  -------------  ------------------  ------------------
+1   Acheter du lait   in-progress    25/02/2026 23:33    25/02/2026 23:45
+```
+
+## Exemple (mark-done)
+
+Input:
+```bash
+task-cli mark-done 1
+```
+
+Expected output:
+```
+id  description       status         createdAt           updatedAt
+--  ----------------  -------------  ------------------  ------------------
+1   Acheter du lait   done           25/02/2026 23:33    25/02/2026 23:45
+```
+
+## Exemple (list filtered: todo)
+
+Input:
+```bash
+task-cli list todo
+```
+
+Expected output:
+```
+id  description       status      createdAt           updatedAt
+--  ----------------  ----------  ------------------  ------------------
+2   Préparer réunion  todo        25/02/2026 22:10    -
+3   Faire sport       todo        25/02/2026 21:00    -
+```
+
+## Exemple (list filtered: in-progress)
+
+Input:
+```bash
+task-cli list in-progress
+```
+
+Expected output:
+```
+id  description         status        createdAt           updatedAt
+--  ------------------  ------------  ------------------  ------------------
+4   Revoir présentation in-progress  25/02/2026 20:00    25/02/2026 22:00
+```
+
+## Exemple (list filtered: done)
+
+Input:
+```bash
+task-cli list done
+```
+
+Expected output:
+```
+id  description       status      createdAt           updatedAt
+--  ----------------  ----------  ------------------  ------------------
+5   Envoyer email     done        24/02/2026 18:00    24/02/2026 19:00
+```
+
+## Exemple (delete)
+
+Input:
+```bash
+task-cli delete 1
+```
+
+Expected output:
+```
+id  description                 status      createdAt           updatedAt
+--  --------------------------  ----------  ------------------  ------------------
+No Task Found
 ```
 
 ## Notes
