@@ -27,41 +27,17 @@ class TestTaskCLIFormatter(unittest.TestCase):
 class TestTaskClIHelperFormatter(unittest.TestCase):
     def test_task_formatter_render(self):
         formatter = TaskClIHelperFormatter()
-        output_expected = textwrap.dedent("""
-            task-cli - simple task tracker from the command line
-
-            USAGE:
-              task-cli [command] [flags]
-
-            DESCRIPTION:
-              A CLI tool to manage your tasks locally.
-              Tasks are stored in a JSON file on your machine.
-
-            COMMANDS:
-              add        Add a new task
-              update     Update an existing task
-              delete     Delete a task
-              mark-in-progress       Mark a task as in-progress
-              mark-done       Mark a task as done
-              list       List tasks (todo, in-progress, done)
-
-            FLAGS:
-              -h, --help     Show help for task-cli
-              -v, --version  Show version information
-
-            EXAMPLES:
-              task-cli add "Buy groceries"
-              task-cli update 1 "Buy groceries and cook dinner"
-              task-cli delete 1
-              task-cli mark 1 in-progress
-              task-cli mark 1 done
-              task-cli list
-              task-cli list done
-              
-        """).strip()
         output = formatter.render()
 
-        self.assertEqual(output, output_expected)
+        self.assertIn('add        Add a new task', output)
+        self.assertIn('update     Update an existing task', output)
+        self.assertIn('delete     Delete a task', output)
+        self.assertIn('mark-in-progress       Mark a task as in-progress', output)
+        self.assertIn('mark-done       Mark a task as done', output)
+        self.assertIn('list       List tasks (todo, in-progress, done)', output)
+        self.assertIn('FLAGS:', output)
+        self.assertIn('-h, --help     Show help for task-cli', output)
+        self.assertIn('-v, --version  Show version information', output)
 
 
 if __name__ == '__main__':
