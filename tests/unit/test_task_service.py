@@ -1,9 +1,9 @@
 import os.path
 import unittest
 
-from application.task_service import TaskService
-from domain.entities import Task, TaskStatus
-from infrastructure.json_repository import JsonTaskRepository
+from task_cli.application.task_service import TaskService
+from task_cli.domain.entities import TaskStatus, Task
+from task_cli.infrastructure.json_repository import JsonTaskRepository
 
 
 class TestTaskService(unittest.TestCase):

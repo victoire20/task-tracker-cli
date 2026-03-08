@@ -3,10 +3,11 @@ import os.path
 import unittest
 from unittest.mock import patch
 
-from application.task_service import TaskService
-from cli.commands import add_commands, list_commands, change_status_commands, update_commands, delete_commands
-from domain.entities import TaskStatus
-from infrastructure.json_repository import JsonTaskRepository
+from task_cli.application.task_service import TaskService
+from task_cli.cli.commands_impl import add_commands, list_commands, change_status_commands, update_commands, \
+    delete_commands
+from task_cli.domain.entities import TaskStatus
+from task_cli.infrastructure.json_repository import JsonTaskRepository
 
 
 class TestCommands(unittest.TestCase):

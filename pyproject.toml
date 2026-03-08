@@ -1,0 +1,44 @@
+[project]
+name = "task-tracker-cli"
+version = "1.0.0"
+description = "A simple task tracker CLI"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+
+authors = [
+  {name = "Yaba Louo Jean de Dieu", email = "gauisyaba@gmail.com"}
+]
+
+maintainers = [
+  {name = "Yaba Louo Jean de Dieu", email = "gauisyaba@gmail.com"}
+]
+
+keywords = ["cli", "tasks", "productivity"]
+
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Environment :: Console",
+  "Topic :: Utilities"
+]
+
+dependencies = [
+]
+
+[project.urls]
+Homepage = "https://github.com/victoire20/task-tracker-cli"
+Repository = "https://github.com/victoire20/task-tracker-cli"
+Issues = "https://github.com/victoire20/task-tracker-cli/issues"
+
+[project.scripts]
+task-cli = "task_cli.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

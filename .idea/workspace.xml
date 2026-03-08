@@ -5,11 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac2625ee-ab7e-4246-a405-448557a17bc4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/task_cli/data/tasks.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/task_cli/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/task_cli/utils/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/data/src/task_cli/data/tasks.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/integration/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/integration/test_integration.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/unit/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/task-tracker-cli.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/task-tracker-cli.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README-FR.md" beforeDir="false" afterPath="$PROJECT_DIR$/README-FR.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_formatter.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_formatter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_handle_command.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_handle_command.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/task_cli/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/task_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/task_cli/application/task_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cli/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/task_cli/application/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cli/cli_formatter.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/task_cli/cli/cli_formatter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cli/commands.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cli/commands_impl.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/task_cli/cli/commands_impl.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/tasks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/task_cli/cli/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/entities.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/task_cli/domain/entities.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/task_cli/domain/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/json_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/task_cli/infrastructure/json_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_commands.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/test_commands.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_formatter.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/test_formatter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_handle_command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_json_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/test_json_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_task_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/test_task_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/task_cli/infrastructure/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/date_formatter.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/task_cli/utils/date_formatter.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +44,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Python Unit Test" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -35,66 +60,98 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python tests.Python tests for tests.command.MyTestCase.executor": "Run",
-    "Python tests.Python tests for tests.command.MyTestCase.test_create_new_task.executor": "Run",
-    "Python tests.Python tests for tests.test_commands.MyTestCase.executor": "Run",
-    "Python tests.Python tests for tests.test_commands.TestCommands.executor": "Run",
-    "Python tests.Python tests for tests.test_commands.TestCommands.test_add_commands.executor": "Run",
-    "Python tests.Python tests for tests.test_commands.TestCommands.test_change_status.executor": "Run",
-    "Python tests.Python tests for tests.test_commands.TestCommands.test_list_commands.executor": "Run",
-    "Python tests.Python tests for tests.test_formatter.TestTaskCLIFormatter.executor": "Run",
-    "Python tests.Python tests for tests.test_formatter.TestTaskClIHelperFormatter.executor": "Run",
-    "Python tests.Python tests for tests.test_handle_command.TestHandleCommand.executor": "Run",
-    "Python tests.Python tests for tests.test_handle_command.TestHandleCommand.test_delete_command_with_fake_id.executor": "Run",
-    "Python tests.Python tests for tests.test_handle_command.TestHandleCommand.test_delete_command_with_wrong_param.executor": "Run",
-    "Python tests.Python tests for tests.test_handle_command.TestHandleCommand.test_delete_command_with_wrong_task_id.executor": "Run",
-    "Python tests.Python tests for tests.test_handle_command.TestHandleCommand.test_helper_documentation.executor": "Run",
-    "Python tests.Python tests for tests.test_handle_command.TestHandleCommand.test_make_done_status_with_good_params.executor": "Run",
-    "Python tests.Python tests for tests.test_handle_command.TestHandleCommand.test_make_done_status_with_wrong_params.executor": "Run",
-    "Python tests.Python tests for tests.test_handle_command.TestHandleCommand.test_make_done_status_with_wrong_status.executor": "Run",
-    "Python tests.Python tests for tests.test_handle_command.TestHandleCommand.test_make_in_progress_status_with_good_params.executor": "Run",
-    "Python tests.Python tests for tests.test_handle_command.TestHandleCommand.test_make_in_progress_status_with_wrong_params.executor": "Run",
-    "Python tests.Python tests for tests.test_handle_command.TestHandleCommand.test_make_in_progress_status_with_wrong_status.executor": "Run",
-    "Python tests.Python tests for tests.test_handle_command.TestHandleCommand.test_update_command.executor": "Run",
-    "Python tests.Python tests for tests.test_handle_command.TestHandleCommand.test_update_command_with_good_params.executor": "Run",
-    "Python tests.Python tests for tests.test_handle_command.TestHandleCommand.test_update_command_with_wrong_task_id.executor": "Run",
-    "Python tests.Python tests for tests.test_json_repository.MyTestCase.executor": "Run",
-    "Python tests.Python tests for tests.test_task_service.TestTaskService.executor": "Run",
-    "Python tests.Python tests for tests.test_task_service.TestTaskService.test_add_task_service.executor": "Run",
-    "Python tests.Python tests for tests.test_task_service.TestTaskService.test_change_task_status.executor": "Run",
-    "Python tests.Python tests for tests.test_task_service.TestTaskService.test_delete_task.executor": "Run",
-    "Python tests.Python tests for tests.test_task_service.TestTaskService.test_get_task_by_id.executor": "Run",
-    "Python tests.Python tests for tests.test_task_service.TestTaskService.test_get_task_by_id_with_fake_id.executor": "Run",
-    "Python tests.Python tests for tests.test_task_service.TestTaskService.test_list_tasks.executor": "Run",
-    "Python tests.Python tests for tests.test_task_service.TestTaskService.test_list_tasks_with_status_done.executor": "Run",
-    "Python tests.Python tests for tests.test_task_service.TestTaskService.test_list_tasks_with_status_in_progress.executor": "Run",
-    "Python tests.Python tests for tests.test_task_service.TestTaskService.test_list_tasks_with_status_todo.executor": "Run",
-    "Python tests.Python tests for tests.test_task_service.TestTaskService.test_update_task.executor": "Run",
-    "Python tests.Python tests in command.py.executor": "Run",
-    "Python tests.Python tests in test_formatter.py.executor": "Run",
-    "Python tests.Python tests in test_handle_command.py.executor": "Run",
-    "Python.json_repository.executor": "Run",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python tests.Python tests for tests.command.MyTestCase.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.command.MyTestCase.test_create_new_task.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.integration.test_integration.TestIntegration.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.integration.test_integration.TestIntegration.test_add_command.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.test_commands.MyTestCase.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.test_commands.TestCommands.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.test_commands.TestCommands.test_add_commands.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.test_commands.TestCommands.test_change_status.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.test_commands.TestCommands.test_list_commands.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.test_formatter.TestTaskCLIFormatter.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.test_formatter.TestTaskClIHelperFormatter.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.test_handle_command.TestHandleCommand.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.test_handle_command.TestHandleCommand.test_delete_command_with_fake_id.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.test_handle_command.TestHandleCommand.test_delete_command_with_wrong_param.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.test_handle_command.TestHandleCommand.test_delete_command_with_wrong_task_id.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.test_handle_command.TestHandleCommand.test_helper_documentation.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.test_handle_command.TestHandleCommand.test_make_done_status_with_good_params.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.test_handle_command.TestHandleCommand.test_make_done_status_with_wrong_params.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.test_handle_command.TestHandleCommand.test_make_done_status_with_wrong_status.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.test_handle_command.TestHandleCommand.test_make_in_progress_status_with_good_params.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.test_handle_command.TestHandleCommand.test_make_in_progress_status_with_wrong_params.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.test_handle_command.TestHandleCommand.test_make_in_progress_status_with_wrong_status.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.test_handle_command.TestHandleCommand.test_update_command.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.test_handle_command.TestHandleCommand.test_update_command_with_good_params.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.test_handle_command.TestHandleCommand.test_update_command_with_wrong_task_id.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.test_integration.TestIntegration.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.test_integration.TestIntegration.test_add_command.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.test_json_repository.MyTestCase.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.test_task_service.TestTaskService.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.test_task_service.TestTaskService.test_add_task_service.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.test_task_service.TestTaskService.test_change_task_status.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.test_task_service.TestTaskService.test_delete_task.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.test_task_service.TestTaskService.test_get_task_by_id.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.test_task_service.TestTaskService.test_get_task_by_id_with_fake_id.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.test_task_service.TestTaskService.test_list_tasks.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.test_task_service.TestTaskService.test_list_tasks_with_status_done.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.test_task_service.TestTaskService.test_list_tasks_with_status_in_progress.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.test_task_service.TestTaskService.test_list_tasks_with_status_todo.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.test_task_service.TestTaskService.test_update_task.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.unit.test_commands.TestCommands.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.unit.test_handle_command.TestHandleCommand.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in command.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_formatter.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_handle_command.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.json_repository.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\LENOVO\PycharmProjects\task-tracker-cli\domain" />
+      <recent name="C:\Users\LENOVO\PycharmProjects\task-tracker-cli\src\task_cli" />
+      <recent name="C:\Users\LENOVO\PycharmProjects\task-tracker-cli\src" />
+      <recent name="C:\Users\LENOVO\PycharmProjects\task-tracker-cli" />
+      <recent name="C:\Users\LENOVO\PycharmProjects\task-tracker-cli\task_cli" />
+      <recent name="C:\Users\LENOVO\PycharmProjects\task-tracker-cli\tests\unit" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for tests.test_handle_command.TestHandleCommand">
-    <configuration name="Python tests for tests.test_handle_command.TestHandleCommand" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Python tests for tests.integration.test_integration.TestIntegration">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="task-tracker-cli" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\LENOVO\PycharmProjects\task-tracker-cli\src\task_cli\main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for tests.integration.test_integration.TestIntegration" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="task-tracker-cli" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -105,11 +162,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_handle_command.TestHandleCommand&quot;" />
+      <option name="_new_target" value="&quot;tests.integration.test_integration.TestIntegration&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for tests.test_handle_command.TestHandleCommand.test_make_in_progress_status_with_good_params" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for tests.integration.test_integration.TestIntegration.test_add_command" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="task-tracker-cli" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -120,11 +177,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_handle_command.TestHandleCommand.test_make_in_progress_status_with_good_params&quot;" />
+      <option name="_new_target" value="&quot;tests.integration.test_integration.TestIntegration.test_add_command&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for tests.test_handle_command.TestHandleCommand.test_make_in_progress_status_with_wrong_params" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for tests.unit.test_commands.TestCommands" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="task-tracker-cli" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -135,11 +192,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_handle_command.TestHandleCommand.test_make_in_progress_status_with_wrong_params&quot;" />
+      <option name="_new_target" value="&quot;tests.unit.test_commands.TestCommands&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for tests.test_handle_command.TestHandleCommand.test_make_in_progress_status_with_wrong_status" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for tests.unit.test_handle_command.TestHandleCommand" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="task-tracker-cli" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -150,32 +207,17 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_handle_command.TestHandleCommand.test_make_in_progress_status_with_wrong_status&quot;" />
+      <option name="_new_target" value="&quot;tests.unit.test_handle_command.TestHandleCommand&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests in test_handle_command.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="task-tracker-cli" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_handle_command.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for tests.test_handle_command.TestHandleCommand" />
-        <item itemvalue="Python tests.Python tests in test_handle_command.py" />
-        <item itemvalue="Python tests.Python tests for tests.test_handle_command.TestHandleCommand.test_make_in_progress_status_with_wrong_status" />
-        <item itemvalue="Python tests.Python tests for tests.test_handle_command.TestHandleCommand.test_make_in_progress_status_with_wrong_params" />
-        <item itemvalue="Python tests.Python tests for tests.test_handle_command.TestHandleCommand.test_make_in_progress_status_with_good_params" />
+        <item itemvalue="Python tests.Python tests for tests.integration.test_integration.TestIntegration" />
+        <item itemvalue="Python tests.Python tests for tests.integration.test_integration.TestIntegration.test_add_command" />
+        <item itemvalue="Python tests.Python tests for tests.unit.test_handle_command.TestHandleCommand" />
+        <item itemvalue="Python tests.Python tests for tests.unit.test_commands.TestCommands" />
+        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>

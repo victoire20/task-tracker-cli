@@ -1,6 +1,6 @@
 from datetime import datetime
-from domain.entities import Task, TaskStatus
-from utils.date_formatter import format_datetime
+
+from task_cli.domain.entities import Task, TaskStatus
 
 
 class TaskService:

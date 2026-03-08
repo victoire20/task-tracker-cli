@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-from domain.entities import Task
+from task_cli.domain.entities import Task
 
 
 class JsonTaskRepository:

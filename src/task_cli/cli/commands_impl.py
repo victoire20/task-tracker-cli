@@ -1,6 +1,6 @@
-from application.task_service import TaskService
-from cli.cli_formatter import TaskCLIFormatter
-from domain.entities import TaskStatus
+from task_cli.application.task_service import TaskService
+from task_cli.cli.cli_formatter import TaskCLIFormatter
+from task_cli.domain.entities import TaskStatus
 
 
 def add_commands(description, service: TaskService):

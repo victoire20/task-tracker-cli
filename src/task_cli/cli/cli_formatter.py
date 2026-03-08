@@ -1,7 +1,7 @@
 import textwrap
 
-from domain.entities import Task
-from utils.date_formatter import format_datetime
+from task_cli.domain.entities import Task
+from task_cli.utils.date_formatter import format_datetime
 
 
 class TaskCLIFormatter:
@@ -50,41 +50,3 @@ class TaskCLIFormatter:
             )
 
         return "\n".join(lines)
-
-
-class TaskClIHelperFormatter:
-    def render(self) -> str:
-        lines = textwrap.dedent("""
-            task-cli - simple task tracker from the command line
-
-            USAGE:
-              task-cli [command] [flags]
-
-            DESCRIPTION:
-              A CLI tool to manage your tasks locally.
-              Tasks are stored in a JSON file on your machine.
-
-            COMMANDS:
-              add        Add a new task
-              update     Update an existing task
-              delete     Delete a task
-              mark-in-progress       Mark a task as in-progress
-              mark-done       Mark a task as done
-              list       List tasks (todo, in-progress, done)
-
-            FLAGS:
-              -h, --help     Show help for task-cli
-              -v, --version  Show version information
-
-            EXAMPLES:
-              task-cli add "Buy groceries"
-              task-cli update 1 "Buy groceries and cook dinner"
-              task-cli delete 1
-              task-cli mark-in-progress 1
-              task-cli mark-done 1
-              task-cli list
-              task-cli list done
-              
-        """).strip()
-
-        return lines

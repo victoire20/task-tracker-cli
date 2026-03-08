@@ -1,0 +1,9 @@
+[
+    {
+        "id": 1,
+        "description": "Buy milk",
+        "status": "todo",
+        "createdAt": "2026-03-08 01:00:36.080278",
+        "updatedAt": null
+    }
+]

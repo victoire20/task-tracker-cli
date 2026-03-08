@@ -4,8 +4,8 @@ import unittest
 from datetime import datetime
 from pathlib import Path
 
-from domain.entities import Task, TaskStatus
-from infrastructure.json_repository import JsonTaskRepository
+from task_cli.domain.entities import TaskStatus, Task
+from task_cli.infrastructure.json_repository import JsonTaskRepository
 
 
 class TestJsonTaskRepository(unittest.TestCase):
